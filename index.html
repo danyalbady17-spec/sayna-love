@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>برای ساینا ❤️</title>
+
+<style>
+
+*{box-sizing:border-box}
+
+body{
+
+margin:0;min-height:100vh;display:grid;place-items:center;
+
+overflow:hidden;font-family:Tahoma,sans-serif;color:white;
+
+background:radial-gradient(circle at top,#a92743,#570014 55%,#21000b);
+
+}
+
+.hearts{position:fixed;inset:0;pointer-events:none}
+
+.heart{position:absolute;bottom:-50px;color:#ff6684;
+
+animation:up linear infinite;text-shadow:0 0 15px red}
+
+@keyframes up{to{transform:translateY(-115vh) rotate(360deg);opacity:0}}
+
+.card{
+
+width:90%;max-width:430px;padding:35px 24px;text-align:center;
+
+border:1px solid #ffffff40;border-radius:28px;
+
+background:#ffffff16;backdrop-filter:blur(10px);
+
+box-shadow:0 20px 70px #0008;
+
+}
+
+h1{font-size:26px;line-height:1.9}
+
+p{line-height:2;color:#ffe0e8}
+
+.big{font-size:55px;margin-bottom:15px}
+
+button{
+
+width:100%;padding:16px;margin:7px 0;border:0;
+
+border-radius:15px;font-size:16px;font-weight:bold;
+
+font-family:Tahoma;cursor:pointer;
+
+}
+
+.yes{background:linear-gradient(90deg,#ff315e,#ff7896);color:white}
+
+.no{background:#ffffff20;color:white;border:1px solid #ffffff60}
+
+.hidden{display:none}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<main class="card">
+
+<section id="first">
+
+<div class="big">❤️</div>
+
+<h1>ساینا خانوم،<br>میدونی چقدر دوست دارم؟</h1>
+
+<p>یه سؤال کوچولو دارم ازت...</p>
+
+<button class="yes" onclick="finalPage()">آره، می‌دونم ❤️</button>
+
+<button class="no" onclick="secondPage()">نه 🙈</button>
+
+</section>
+
+<section id="second" class="hidden">
+
+<div class="big">💗</div>
+
+<h1>پس ببین چقدر دوست دارم!</h1>
+
+<p>یه چیزی هست که باید بهت بگم...</p>
+
+<button class="yes" onclick="finalPage()">ببینم چی می‌خوای بگی؟ ❤️</button>
+
+</section>
+
+<section id="last" class="hidden">
+
+<div class="big">❤️‍🔥</div>
+
+<h1>نه، نمی‌دونی من چقدر دوست دارم!</h1>
+
+<p>
+
+ساینا جان، شاید هیچ جمله‌ای نتونه اندازه واقعی احساسم رو نشون بده؛
+
+اما می‌خوام بدونی بودنت برام قشنگه.
+
+از لبخندت تا حرف‌های ساده‌ات، چیزهای کوچیکی هستن
+
+که روزم رو بهتر می‌کنن.
+
+امیدوارم همیشه دلیلی برای لبخند زدن داشته باشی
+
+و بدونی که چقدر برام ارزشمندی. ❤️
+
+</p>
+
+</section>
+
+</main>
+
+<script>
+
+for(let i=0;i<30;i++){
+
+let h=document.createElement('span');
+
+h.className='heart';h.innerText='❤';
+
+h.style.left=Math.random()*100+'%';
+
+h.style.fontSize=(15+Math.random()*25)+'px';
+
+h.style.animationDuration=(7+Math.random()*9)+'s';
+
+h.style.animationDelay=(-Math.random()*12)+'s';
+
+document.getElementById('hearts').appendChild(h);
+
+}
+
+function secondPage(){
+
+document.getElementById('first').classList.add('hidden');
+
+document.getElementById('second').classList.remove('hidden');
+
+}
+
+function finalPage(){
+
+document.getElementById('first').classList.add('hidden');
+
+document.getElementById('second').classList.add('hidden');
+
+document.getElementById('last').classList.remove('hidden');
+
+}
+
+</script>
+
+</body>
+
+</html>
